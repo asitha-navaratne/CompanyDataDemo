@@ -1,4 +1,4 @@
-import { FC, memo } from "react";
+import { FC } from "react";
 
 import { CardProps } from "./Card.types";
 
@@ -24,7 +24,7 @@ const Card: FC<CardProps> = (props) => {
           {props.companies.map((company) => (
             <div
               key={company.id}
-              className="flex items-center justify-between mt-1"
+              className="flex items-center justify-between mt-4"
             >
               <div className="flex items-center">
                 <img
@@ -46,4 +46,4 @@ const Card: FC<CardProps> = (props) => {
   );
 };
 
-export default memo(Card);
+export default Card;
