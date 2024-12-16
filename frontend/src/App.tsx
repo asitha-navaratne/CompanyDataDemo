@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Card from "./components/Card";
 
 import CompanyDataType from "./types/CompanyDataType";
+import IndustriesObjType from "./types/IndustriesObjType";
 
 import GetCompanies from "./services/GetCompanies";
 
@@ -20,7 +21,9 @@ function App() {
    * @param payload CompanyDataType[] Payload object from API to be processed
    * @returns Companies sorted out by industry in the format {industryName: CompanyDataType[]}
    */
-  const processPayload = function (payload: CompanyDataType[]) {
+  const processPayload = function (
+    payload: CompanyDataType[]
+  ): IndustriesObjType {
     return payload.reduce(
       (
         industriesAcc: { [key: string]: CompanyDataType[] },
