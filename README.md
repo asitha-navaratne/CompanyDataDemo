@@ -14,11 +14,7 @@ First of all,
 
 ### To Run the Backend (JSON Server)
 
-- Open a terminal within the backend folder (Right-click on the folder and "Open in Terminal"), or run the following command in the previously opened console window;
-
-```
-    cd backend
-```
+- Open a terminal within the backend folder (Right-click on the folder and "Open in Terminal").
 
 - Run the following command to install all necessary libraries.
 
