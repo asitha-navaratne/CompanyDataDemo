@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import Card from "./components/Card";
 
-import IndustriesObjType from "./types/IndustriesObjType";
 import CompanyDataType from "./types/CompanyDataType";
 
 import GetCompanies from "./services/GetCompanies";
 
 function App() {
-  const [companiesByIndustry, setCompaniesByIndustry] =
-    useState<IndustriesObjType>({});
+  const [companies, setCompanies] = useState<CompanyDataType[]>([]);
 
   useEffect(() => {
     GetCompanies().then((res) => {
-      setCompaniesByIndustry(processPayload(res));
+      setCompanies(res);
     });
   }, []);
 
@@ -43,6 +41,11 @@ function App() {
       {}
     );
   };
+
+  const companiesByIndustry = useMemo(
+    () => processPayload(companies),
+    [companies]
+  );
 
   return (
     <div className="flex flex-col items-center justify-center p-5 bg-blue-50">
