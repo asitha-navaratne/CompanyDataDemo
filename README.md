@@ -7,7 +7,7 @@ First of all,
 - Open a console window and run the following command to clone the repository onto yor local machine;
 
 ```
-    git clone https://github.com/asitha-navaratne/CompanyDataDemo.git
+git clone https://github.com/asitha-navaratne/CompanyDataDemo.git
 ```
 
 ---
@@ -19,13 +19,13 @@ First of all,
 - Run the following command to install all necessary libraries.
 
 ```
-    npm install
+npm install
 ```
 
 - Run the following command to start the JSON Server
 
 ```
-    npx json-server db.json
+npx json-server db.json
 ```
 
 - The JSON Server will have started at [localhost:3000](http://localhost:3000/)!
@@ -39,13 +39,13 @@ First of all,
 - Run the following command to install all necessary libraries.
 
 ```
-    npm install
+npm install
 ```
 
 - Run the following command to start the frontend application
 
 ```
-    npm run dev
+npm run dev
 ```
 
 - The application will be running on [localhost:5173](http://localhost:5173/)!
